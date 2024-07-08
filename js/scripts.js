@@ -30,4 +30,12 @@ function newItem(){
     };
 
     $('#list').sortable();
+
 }
+
+$(window).on('keypress', function (e) {
+    if (e.which == 13) {
+        event.preventDefault();
+        newItem();
+    }
+});
